@@ -1,0 +1,29 @@
+@mixin navigation-buttons
+   width: 35px
+   height: 93px
+   border-radius: $arrowRadius
+   background: #3C6B86
+   position: relative
+   div
+      position: absolute
+      z-index: 1
+   div:hover
+      cursor: pointer
+   div:first-child
+      left: 20%
+      top: 10%
+      transform: rotate(-90deg)
+      color: white
+      font-weight: 100
+   div:last-child
+      transform: rotate(90deg)
+      left: 30%
+      bottom: 10%
+   &::after
+      content: ''
+      position: absolute
+      width: 35px
+      height: (93px / 2 + 4px)
+      background: white
+      bottom: 0
+      border-radius: $arrowRadius

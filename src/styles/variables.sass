@@ -1,0 +1,13 @@
+$mainBlue: #63AAD1
+$secendaryFontColor: rgba(0,0,0,0.58)
+
+@mixin font-weight($weight)
+   $weights: ( "regular": 400, "medium": 500, "bold": 700)
+   $output: $weight
+   @if map-has-key($weights, $weight)
+      $output: map-get($weights, $weight)
+
+      font-weight: $output
+
+@function spacing($size)
+   @return $size * 8px
