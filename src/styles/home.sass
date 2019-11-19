@@ -1,70 +1,71 @@
 @import './variables'
 @import './navigationButtons.sass'
 @import './pageCounter'
+$arrowRadius: 17px
 
 .home-container
    border-bottom: 1px solid rgba(0,0,0,0.7)
    height: 100vh
    display: grid
+   grid-template-rows: minmax(64px, 1fr) 2fr 6fr 4fr 2fr 1fr
    grid-template-columns: 1fr 1fr 8fr 3fr
-   grid-template-rows: minmax(64px, 1fr) 2fr 6fr 4fr 2fr
 
-.home-background
-   background-color: $mainBlue
-   grid-column: 4 / 5
-   height: 100vh
+   @include links
 
-.nav-wrapper
-   grid-row: 1 / 2
-   grid-column: 3 / 4
-   ul
-      list-style-type: none
-      display: flex
-      justify-content: flex-end
-      margin: spacing(3) spacing(4)
-   li
-      font-weight: fontWeights
-      font-size: spacing(3)
-      margin-left: 68px
-      cursor: pointer
-      &:hover
-         border-bottom: 2px solid $mainBlue
+   .home-background
+      background-color: $mainBlue
+      grid-column: 4 / 6
+      height: 100vh
 
-.owner-info
-   grid-row: 3 / 4
-   grid-column: 3 / 4
-   display: grid
-   grid-gap: 20px
-   grid-template-rows: 1fr
-   grid-template-columns: 1fr 1fr
-   h1
-      font-size: spacing(5)
-      @include font-weight(medium)
-
-   .owner-description
-      color: $secendaryFontColor
-   img
-      width: 100%
+   .nav-wrapper
       grid-row: 1 / 2
-      grid-column: 2 / 2
-      transform: translateX(20%)
+      grid-column: 3 / 4
+      ul
+         list-style-type: none
+         display: flex
+         justify-content: flex-end
+         margin: spacing(3) spacing(4)
+      li
+         font-weight: fontWeights
+         font-size: spacing(3)
+         margin-left: 68px
+         cursor: pointer
+         &:hover
+            border-bottom: 2px solid $mainBlue
 
-.page-counter
-   grid-row: 4 / 5
-   grid-column: 2 / 3
-   align-self: end
-   position: relative
-   @include page-counter
-   
+   .owner-info
+      grid-row: 3 / 4
+      grid-column: 3 / 4
+      display: grid
+      grid-gap: 20px
+      grid-template-rows: 1fr
+      grid-template-columns: 1fr 1fr
+      h1
+         font-size: spacing(5)
+         @include font-weight(medium)
 
-.navigation-arrow
-   grid-row: 4 / 5
-   grid-column: 4 / 5
+      .owner-description
+         color: $secendaryFontColor
+      img
+         width: 100%
+         grid-row: 1 / 2
+         grid-column: 2 / 2
+         transform: translateX(20%)
 
-$arrowRadius: 17px
+   .page-counter
+      grid-row: 4 / 5
+      grid-column: 2 / 3
+      justify-self: start
+      align-self: end
+      position: relative
+      @include page-counter
 
-.navigation-arrow
-   @include navigation-buttons()
-   justify-self: end
-   align-self: end 
-   transform: translateX(-100%)
+   .navigation-arrow
+      grid-row: 4 / 5
+      grid-column: 4 / 5
+
+   .navigation-arrow
+      @include navigation-buttons
+      justify-self: end
+      align-self: end
+      transform: translateX(-100%)

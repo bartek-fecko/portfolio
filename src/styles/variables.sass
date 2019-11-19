@@ -11,3 +11,17 @@ $secendaryFontColor: rgba(0,0,0,0.58)
 
 @function spacing($size)
    @return $size * 8px
+
+@mixin withoutLinkStyles($color)
+   text-decoration: none
+   color: $color
+
+@mixin links
+   .black-link
+      @include withoutLinkStyles(black)
+
+   .white-link
+      @include withoutLinkStyles(white)
+
+   .blue-link
+      @include withoutLinkStyles($mainBlue)

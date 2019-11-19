@@ -1,3 +1,57 @@
+@import './variables'
+@import './icons'
+
 .projects-container
-   height: 100vh
-   
+   border-bottom: 1px solid rgba(0,0,0,0.7)
+   display: grid
+   grid-template-rows: 100px 6fr 1fr 2fr
+   grid-template-columns: 1fr 1fr 8fr 3fr
+
+   @include links
+   @include icons
+
+   h1
+      grid-row: 1 / 2
+      grid-column: 3 / 4
+      font-size: spacing(5)
+      @include font-weight(medium)
+
+   .project-img
+      max-width: 400px
+
+   .project-body
+      grid-row: 2 / 3
+      grid-column: 3 / 4
+
+   .project-icons
+      position: absolute
+      right: -100px
+      list-style-type: none
+      li
+         margin: spacing(2) 0
+
+   .project-box
+      display: flex
+      position: relative
+      margin: spacing(2) 0
+
+   .project-description-wrapper
+      h2 i
+         color: $secendaryFontColor
+         @include font-weight(regular)
+
+   .page-counter
+      @include page-counter
+      grid-row: 3 / 4
+      grid-column: 2 / 3
+      justify-self: start
+      align-self: end
+      position: relative
+
+   .navigation-arrow
+      grid-row: 3 / 4
+      grid-column: 4 / 5
+      @include navigation-buttons
+      justify-self: end
+      align-self: end
+      transform: translateX(-100%)

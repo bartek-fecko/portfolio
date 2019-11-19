@@ -8,13 +8,14 @@
 </head>
 
 <body>
-  <main class="home-container">
+
+  <section class="home-container" id="home-container">
     <div class="home-background"></div>
     <nav class="nav-wrapper">
       <ul>
-        <li>Home</li>
-        <li>Projects</li>
-        <li>Contact</li>
+        <li><a href="#home-container" class="black-link">Home</a></li>
+        <li><a href="#projects-container" class="black-link">Projects</a></li>
+        <li><a href="#contact-container" class="black-link">Contact</a></li>
       </ul>
     </nav>
     <section class="owner-info">
@@ -26,17 +27,61 @@
       </div>
       <img src="/public/programmer.png" />
     </section>
-    <section class="page-counter">
+    <div class="page-counter">
       <span>01</span>
       <span>Home</span>
-    </section>
-    <section class="navigation-arrow">
-      <div>➜</div>
-      <div>➜</div>
-    </section>
-  </main>
-  <section class="projects-container">
+    </div>
+    <div class="navigation-arrow">
+      <div><a href="#home-container" class="white-link">➜</a></div>
+      <div><a href="#projects-container" class="blue-link">➜</a></div>
+    </div>
+  </section>
 
+  <section class="projects-container" id="projects-container">
+    <h1>My Projects</h1>
+    <section class="project-body">
+      <div class="project-box">
+        <div class="project-description-wrapper">
+          <h2><i>Fullstack Application</i></h2>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam obcaecati ipsum ex est! Doloribus
+            laboriosam
+            ullam quibusdam ducimus cumque sed!</p>
+        </div>
+        <img src="/public/fullstack.png" class="project-img" />
+        <div class="project-fullstack-icons project-icons">
+          <li class="react-icon"></li>
+          <li class="node-icon"></li>
+          <li class="redux-icon"></li>
+          <li class="material-icon"></li>
+          <li class="heroku-icon"></li>
+          </ul>
+        </div>
+      </div>
+      <div class="project-box">
+        <div class="project-description-wrapper">
+          <h2><i>Battleship Online</i></h2>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam obcaecati ipsum ex est! Doloribus
+            laboriosam
+            ullam quibusdam ducimus cumque sed!</p>
+        </div>
+        <img src="/public/battleship.png" class="project-img" />
+        <ul class="project-battleship-icons project-icons">
+          <li class="react-icon"></li>
+          <li class="node-icon"></li>
+          <li class="socket-icon"></li>
+          <li class="heroku-icon"></li>
+        </ul>
+        </ul>
+      </div>
+    </section>
+    <div class="page-counter">
+      <span>02</span>
+      <span>Projects</span>
+    </div>
+    <div class="navigation-arrow">
+      <div><a href="#home-container" class="white-link">➜</a></div>
+      <div><a href="#contact-container" class="blue-link">➜</a></div>
+    </div>
   </section>
 </body>
 
