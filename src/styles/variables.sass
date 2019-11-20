@@ -25,3 +25,11 @@ $secendaryFontColor: rgba(0,0,0,0.58)
 
    .blue-link
       @include withoutLinkStyles($mainBlue)
+
+@mixin useMaxWidth($maxWidth)
+   @media only screen and (max-width: $maxWidth)
+      @content
+
+@mixin useMinWidth($minWidth)
+   @media only screen and (min-width: $minWidth)
+      @content
