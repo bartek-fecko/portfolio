@@ -15,7 +15,7 @@
       <ul>
         <li><a href="#home-container" class="black-link">Home</a></li>
         <li><a href="#projects-container" class="black-link">Projects</a></li>
-        <li><a href="#contact-container" class="black-link">Contact</a></li>
+        <li><a href="#experience-container" class="black-link">Experience</a></li>
       </ul>
     </nav>
     <section class="owner-info">
@@ -23,8 +23,8 @@
         <p class="owner-name">Hi I'm Bartek</p>
         <img src="/public/programmer.png" alt="user work image" class="user-image-mb" />
         <h1>I'm Frontend Developer</h1>
-        <p class="owner-description">Lorem ipsum dolor sita odio enim et deserunexpedierendis ad nisi. Lorem ipsum dolor
-          sit lorem10 amet consectetur adipisicing elit. Architecto, labore?</p>
+        <p class="owner-description">from Krakow. Here's information about me. Currently i'm looking for junior frontend
+          job</p>
       </div>
       <img src="/public/programmer.png" alt="user work image" class="user-image-lg" />
     </section>
@@ -44,11 +44,18 @@
       <div class="project-box">
         <div class="project-description-wrapper">
           <h2><i>Fullstack Application</i></h2>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam obcaecati ipsum ex est! Doloribus
-            laboriosam
-            ullam quibusdam ducimus cumque sed!</p>
+          <p>Single page app build with React and Node that allow people to create posts, profiles. Created with jwt
+            authentication</p>
         </div>
-        <img src="/public/fullstack.png" class="project-img" alt="project picture" />
+        <div class="image-with-link-container">
+          <div class="image-overlay">
+            <div class="image-links-wrapper">
+              <a href="https://github.com/bartek-fecko/fullstackapp" target="new">Github</a>
+              <a href="https://fullstackappr.herokuapp.com/" target="new">Preview</a>
+            </div>
+          </div>
+          <img src="/public/fullstack.png" class="project-img" alt="project picture" />
+        </div>
         <ul class="project-fullstack-icons project-icons">
           <li class="react-icon"></li>
           <li class="node-icon"></li>
@@ -60,11 +67,17 @@
       <div class="project-box">
         <div class="project-description-wrapper">
           <h2><i>Battleship Online</i></h2>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam obcaecati ipsum ex est! Doloribus
-            laboriosam
-            ullam quibusdam ducimus cumque sed!</p>
+          <p>Multplayer game allows people to talk with each other and play classic board game online</p>
         </div>
-        <img src="/public/battleship.png" class="project-img" alt="project picture" />
+        <div class="image-with-link-container">
+          <div class="image-overlay">
+            <div class="image-links-wrapper">
+              <a href="https://github.com/bartek-fecko/battleshipSockets" target="new">Github</a>
+              <a href="https://battleshipsockets.herokuapp.com/" target="new">Preview</a>
+            </div>
+          </div>
+          <img src="/public/battleship.png" class="project-img" alt="project picture" />
+        </div>
         <ul class="project-battleship-icons project-icons">
           <li class="react-icon"></li>
           <li class="node-icon"></li>
@@ -79,11 +92,12 @@
     </div>
     <div class="navigation-arrow">
       <div><a href="#home-container" class="white-link">➜</a></div>
-      <div><a href="#contact-container" class="blue-link">➜</a></div>
+      <div><a href="#experience-container" class="blue-link">➜</a></div>
     </div>
   </section>
 
-  <section class="contact-container" id="contact-container">
+  <section class="experience-container" id="experience-container">
+    <div class="experience-background"></div>
     <div class="experience-wrapper">
       <h1>My Experience</h1>
       <p>Uniwersytet Pedagogiczny- IT studies</p>
@@ -101,14 +115,22 @@
     </div>
     <div class="page-counter">
       <span>03</span>
-      <span>Contact</span>
+      <span>Experience</span>
     </div>
-    <img src="/public/github.png" class="github-link" alt="github project link">
     <div class="navigation-arrow">
-      <div><a href="#home-container" class="white-link">➜</a></div>
-      <div><a href="#projects-container" class="blue-link">➜</a></div>
+      <div><a href="#projects-container" class="white-link">➜</a></div>
+      <div><a href="#home-container" class="blue-link">➜</a></div>
     </div>
   </section>
+
+  <footer>
+    <a href="https://github.com/bartek-fecko" target="new" class="github-link"><img src="/public/github.png"
+        alt="github project link"></a>
+    <div class="contact-wrapper">
+      <h4>Contact</h4>
+      <p>bartlomiej.fecko@gmail.com</p>
+    </div>
+  </footer>
 
 </body>
 
