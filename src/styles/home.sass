@@ -1,21 +1,7 @@
-@import './variables'
+@import './shared'
 @import './navigationButtons.sass'
 @import './pageCounter'
 $arrowRadius: 17px
-
-@keyframes slide-left
-   0%
-      opacity: 0
-      transform: translateX(-100%)
-   100%
-      opacity: 1
-      transform: translateX(0)
-   
-@keyframes fade-in
-   0%
-      opacity: 0
-   100%
-      opacity: 1
 
 .home-container
    border-bottom: 1px solid rgba(0,0,0,0.7)
@@ -49,6 +35,8 @@ $arrowRadius: 17px
          &:hover
             border-bottom: 2px solid $mainBlue
 
+   @include slide-left
+   @include fade-in
    .owner-info
       grid-row: 3 / 4
       grid-column: 3 / 4
