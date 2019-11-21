@@ -3,6 +3,20 @@
 @import './pageCounter'
 $arrowRadius: 17px
 
+@keyframes slide-left
+   0%
+      opacity: 0
+      transform: translateX(-100%)
+   100%
+      opacity: 1
+      transform: translateX(0)
+   
+@keyframes fade-in
+   0%
+      opacity: 0
+   100%
+      opacity: 1
+
 .home-container
    border-bottom: 1px solid rgba(0,0,0,0.7)
    height: 100vh
@@ -45,6 +59,8 @@ $arrowRadius: 17px
       h1
          font-size: spacing(5)
          @include font-weight(medium)
+         animation: 2s 1s fade-in forwards
+         opacity: 0
 
       .owner-description
          color: $secendaryFontColor
@@ -53,6 +69,9 @@ $arrowRadius: 17px
       grid-row: 1 / 2
       grid-column: 2 / 2
       transform: translateX(20%)
+
+   .owner-name 
+      animation: slide-left 1s
 
    .page-counter
       grid-row: 4 / 5
@@ -65,8 +84,6 @@ $arrowRadius: 17px
    .navigation-arrow
       grid-row: 4 / 5
       grid-column: 4 / 5
-
-   .navigation-arrow
       @include navigation-buttons
       justify-self: end
       align-self: end
@@ -83,9 +100,11 @@ $arrowRadius: 17px
          justify-content: center
          align-items: center
 
+
       .owner-name
          font-size: spacing(3)
          color: $secendaryFontColor
+
       .nav-wrapper
          min-height: 80px
          background: $mainBlue

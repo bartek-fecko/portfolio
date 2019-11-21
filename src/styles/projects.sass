@@ -25,12 +25,20 @@
          height: 100%
          background: $mainBlue
          .image-links-wrapper
+            *
+               display: inline-block
             a
                color: white
+               margin: spacing(1)
             position: absolute
             top: 50%
             left: 50%
             transform: translate(-50%, -50%)
+
+         .image-links-wrapper span:hover
+            transform: translateY(-10px)
+            transition: transform 0.5s
+
    .image-with-link-container:hover .image-overlay
       display: flex
       
@@ -103,6 +111,7 @@
 
       .page-counter
          align-self: center
+
       @include useMaxWidth(460px)
          .project-description-wrapper p
             width: 140%
